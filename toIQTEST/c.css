@@ -1,58 +1,462 @@
-#progressBar {
-  width: 90%;
-  margin: 10px auto;
-  height: 22px;
-  background-color: #0A5F44;
+
+
+
+#id{
+   border: none;
+  border-radius: 2px;
+  padding: 12px 18px;
+  font-size: 16px;
+  text-transform: uppercase;
+  cursor: pointer;
+  color: white;
+  background-color: #2196f3;
+    background-position: center;
+  transition: background 0.8s;
+  box-shadow: 0 0 4px #999;
+  outline: none;
+
 }
 
-#progressBar div {
-  height: 100%;
-  text-align: right;
-  padding: 0 10px;
-  line-height: 22px; /* same as #progressBar height if we want text middle aligned */
-  width: 0;
-  background-color: #CBEA00;
-  box-sizing: border-box;
+#id:active{
+
+  background-color: #6eb9f7;
+  background-size: 100%;
+  transition:background 0s;
 }
 
-.mfk {
+#g{
+  width: 10%;
+  
+  position: absolute;
+  top: 130px;
+}
 
+#animal_form {
+position: relative;
+top: 450px;
+left: -140px;
+text:green;
+}
+
+#cryptex {
+	position: absolute;
+left: 800px;
+top: 288px;
+  height: 58px;
+  width: 240px;
+  overflow: hidden;
+  border-color: green;
+  border: 1px solid blue;
+
+}
+
+.item1, .item2,.item3 
+ {
+ 	position: static;
+	padding: 1px;
+	height: 18px;
+	width: 3000px;
+	border-radius: 3px;
+}
+
+.item1:hover
+{ position: static;
+  padding: 1px;
+  height: 18px;
+  border-radius: 3px;
+ -webkit-animation: jwla1 10s infinite;
+ display: inline-grid;
+}
+.item2:hover
+{ position: static;
+  padding: 1px;
+  height: 18px;
+  width: 240px;
+  border-radius: 3px;
+ -webkit-animation: ticker 25s cubic-bezier(1, 0, 0.5, 0) infinite;
+}
+.item3:hover
+{ position: static;
+  padding: 1px;
+  height: 18px;
+  width: 240px;
+  border-radius: 3px;
+ -webkit-animation: jwla3 1s infinite;
+}
+@-webkit-keyframes jwla1 { 
+  0% {-webkit-transform:  translate(0px, 0px)} /* atwany har yakekyan bnwsi  50%  {-webkit-transform:  translate(0px, 20px)} */
+  25% {-webkit-transform:  translate(-25px, 0px)}
+  50% {-webkit-transform:  translate(-50px, 0px)}
+  75% {-webkit-transform:  translate(-75, 0px)}
+  100% {-webkit-transform:  translate(-100px, 0px)}
+}
+@-webkit-keyframes jwla2 { 
+  0% {-webkit-transform:  translate(0, 0)}
+
+}
+@-webkit-keyframes jwla3 { 
+  0% {-webkit-transform:  translate(0, 0)}
+    50%  {-webkit-transform:  translate(0px, -20px)} /* atwany har yakekyan bnwsi  50%  {-webkit-transform:  translate(0px, 20px)} */
+    100% {-webkit-transform:  translate(0px, 0px)}
+}
+
+div.item1:hover
+ {
+  perspective: 60px;
+  color:blue;
+}
+
+
+
+.item3:hover
+{
+  color: green;
+  /* border: groove; 3d border */
+}
+  body {
+  	background-color: grey;
+    position: relative;
+  }
+  
+  ul {
+  	color: black;
+  }
+#formy_rast_Xwarawa {
+position: relative;
+left: -31px;
+top: 230px;
+ width:170px;
+height: 250px;
+transition: transform 1s;
+border-radius: 26px;
+border: 2px;
+background-color: #f1f1f1;
+border:  0.1px solid darkblue; /* css syntax
+                                  border: 5px solid red;  */
+
+}
+
+#formy_rast_Xwarawa:hover {
+	transform: scale(0.95); /* ZOOM IT*/
+	border-radius: 28px;
+	background-color: #ccc;
+	border:  1px solid darkgreen;
+
+}
+
+.text span:hover {  /*syntax bam shewaya (((.class element:hover))) "boy rangish bgorit la hover*/
+	background-color:rgba(43, 180, 32  ,20);
+	 color: darkblue;
+	font-size: 26px;
+
+}
+
+.slidingVertical {
+	display: inline;
+	text-indent: 8px;
+	transition: visibility 0s 2s, opacity 2s linear;
+}
+.slidingVertical span {
+	animation: fadeEffect 5s linear infinite 0s;
+	-ms-animation: fadeEffect 5s linear infinite 0s;
+	-webkit-animation: fadeEffect 5s linear infinite 0s;
+	color: #00abe9;
+	opacity: 0.5;
+	animation-delay: 2s; /* animation starts after 2 second*/
+	position: absolute;
+}
+
+
+
+@-webkit-keyframes fadeEffect {
+  50% { opacity: 0.1; }
+}
+
+@keyframes fadeEffect {
+  0% { opacity: 0.5; }
+   15% { opacity: 1; }
+  25% { opacity: 2; }
+  50% { opacity: 3; }
+  75% { opacity: 2; }
+  90% { opacity: 1; }
+  100% { opacity: 0.5; }
+}
+
+
+
+/*-----------------------------------------*/
+section.dice {
+  margin: 0 auto;
+  height: 50px; width: 50px;
+  position: relative;
+  transform-style: preserve-3d;
+  animation: turn 10s infinite linear;
+}
+@keyframes turn {
+  0% {   transform: scale(2)  rotateY(0deg) rotateX(30deg) translateY(100px)}
+  100% { transform: scale(2) rotateY(360deg) rotateX(30deg) translateY(100px)}
+}
+.dice div {
+  position: absolute;
+  top: 0; left: 0;
+  font-size: 50px;
+  background: white;
+  width: 50px; height: 50px;
+  text-align: center;
+  box-shadow: inset 0 0 25px #aaa, 0 0 20px #fff;
+  border-radius: 2px;
+}
+.dice div:after, .dice div:before {
+  position: relative;
+  display: block;
+  transform: rotate(0.1deg);  
+}
+.dice div:nth-child(1):after{
+  content: ".";  
+  bottom: 20px;  
+}
+.dice div:nth-child(2) {
+  transform: 
+    translateX(50%)
+    rotateY(90deg) 
+    translateX(50%);
+}
+.dice div:nth-child(2):after{
+  content: ". .";
+  transform: rotate(45deg);  
+  left: 10px; bottom: 15px;
+}
+.dice div:nth-child(3) {
+  transform: 
+    translateY(50%)
+    rotateX(90deg) 
+    translateY(-50%);
+}
+.dice div:nth-child(3):after{
+  content: "...";
+  transform: rotate(45deg);  
+  left: 10px; bottom: 15px;
+}
+.dice div:nth-child(4) {
+  transform: 
+    translateY(-50%)
+    rotateX(90deg) 
+    translateY(-50%);
+}
+.dice div:nth-child(4):before{
+  content: ". .";
+  bottom: 35px;
+}
+.dice div:nth-child(4):after{
+  content: ". .";
+  bottom: 65px;
+}
+.dice div:nth-child(5) {
+  transform: 
+    translateX(-50%)
+    rotateY(-90deg) 
+    translateX(-50%);
+}
+.dice div:nth-child(5):before{
+  content: ". . .";
+  line-height: 14px;
+  bottom: 10px;
+}
+.dice div:nth-child(5):after{
+  content: ". .";
+  bottom: 33px;
+}
+.dice div:nth-child(6) {
+  transform: 
+    rotateY(-90deg) 
+    translateX(-100%)
+    rotateY(-90deg);
+}
+.dice div:nth-child(6):before{
+  content: "...";
+  bottom: 35px;
+}
+.dice div:nth-child(6):after{
+  content: "...";
+  bottom: 60px;
+}
+
+
+
+
+.tab {
+    float: left;
+    border: 1px solid #ccc;
+    background-color: #f1f1f1;
+    width: 20%;
+    height: 250px;
+}
+
+.tab button { 
+    display: block;
+    background-color: inherit;
+    color: black;
+    padding: 22px 16px;
+    width: 100%;
+    border: none;
+    outline: none;
+    text-align: left;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.tab button:hover {
+    background-color: #ddd;
+    border-radius: 25px;
+}
+
+.tab button.active {
+    background-color: #ccc;
+}
+
+
+
+
+
+  .tab {
+    padding: 18px;
+    max-height: 10;
+    overflow: hidden;
+    transition: max-height 0.2s ease-out;
+
+}
+/* change in tab divisions colors when hovered on*/
+ .tab button:hover {
+    color:#5F8F39;
+
+}
+/*^^^^^^^^^^*/
+
+
+
+.tab1 button,form {
+    display: block;
+    background-color: inherit;
+    color: black;
+    padding: 22px 16px;
+    width: 40%;
+    height: 30%;
+    border: none;
+    outline: none;
+    text-align: left;
+    cursor: pointer;
+    transition: 0.3s;
+    border: 2px solid #4CAF50;
+    background-color: #f1f1f1;
+    float: right;
+
+}
+/* change login form color when hovered on*/
+.tab1 form:hover{
+  background-color: #ccc;
+}
+/*Trying ::after selector This has no related to the subject*/
+
+.tab:after {
+    content: '\002B';
+    color: blue;
+    font-weight: bold;
+    float: right;
+    margin-left: 5px;
+    content: "Tjokusoooooooo";
+
+}
+
+/*change Text color above the login form when hoverd on it*/
+.tab1 button:hover {
+    background-color: #ddd;
+    border-radius: 25px;
+}
+
+.B52 button {
+  background-color: #ddd;
+   border-radius: 25px;
+   color: green;
+   text-align: center;
+}
+.B52 button:hover {
   background-color: #ccc;
    border-radius: 25px;
-   color: rgb(0, 34, 66);
-      /* text-align: center;*/
+   color: darkgreen;
+   /* text-align: center;*/
    display: inline;
-  text-indent: 1000px;
+  text-indent: 0px;
   text-orientation: 80px;
-   transform: scale(1.9); 
+   transform: scale(0.9); 
+  /* cool stuff*/
+   
+}
+
+/* #<<< bo id i */
+#i {
+transform: scale(1.1); 
+}
+
+.B52:hover #i {
+transform: scale(1.6); 
+}
+
+
+input{
+-webkit-border-radius: 50px;
+-moz-border-radius: 50px;
+border-radius: 50px;
+}
+/*this is how you do it the structure: .className:hover #Id {  }*/
+.tab1:hover #textIntro
+{
+  background-color: none;
   
-}
-
-.mfk:hover{
-  background-color: rgb(219, 223, 20);
-  width: calc(8% - 10px);
-  height: 100%;
-  text-align: right;
-  padding: 0 100px;
-  width: 0;
-  background-color: #CBEA00;
-  box-sizing: border-box;
+  color:green;
 }
 
 
 
-#mfk div {
+/* this is for testing class calc*/
+  .calc {
+      display: inline-block;
+      position: absolute;
+      background-color: darkgreen;
+      width: 100px;
+        height: 100px;
+      left:290px;
+      top:480px;  
+      margin:-60px 0 0 -60px;
+        -webkit-animation:spin 4s linear infinite;
+      -moz-animation:spin 4s linear infinite;
+      animation:spin 4s linear infinite;
+      }
+    
+@-moz-keyframes spin { 100% { -moz-transform: rotate(360deg); } }
+@-webkit-keyframes spin { 100% { -webkit-transform: rotate(360deg); } }
+@keyframes spin { 100% { -webkit-transform: rotate(360deg); transform:rotate(360deg); } }
 
-  display: block;
-  background-color: inherit;
-  color: black;
-  padding: 22px 16px;
-  width: 100%;
-  border: none;
-  outline: none;
-  text-align: left;
-  cursor: pointer;
-  transition: 0.3s;
+  
+  .calc:hover{
+    background-color: darkblue;
+    width: calc(8% - 10px);
+
+  }
+  
+  /* details viewing users stuff*/
+  .detailId {
+    color:orange;
+    width: calc(23% - 10px);
+    position: absolute;
+    left:40px;
+    top:380px;
+  }
+  
+  
+#Your_Email{
+  top:80px;
+  left: 40px;
+  position:absolute;
 }
-/* Do not take in account */
-html{padding-top:30px}a.solink{position:fixed;top:0;width:100%;text-align:center;background:#f3f5f6;color:#cfd6d9;border:1px solid #cfd6d9;line-height:30px;text-decoration:none;transition:all .3s;z-index:999}a.solink::first-letter{text-transform:capitalize}a.solink:hover{color:#428bca}
+
+  

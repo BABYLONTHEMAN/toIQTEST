@@ -137,7 +137,95 @@ section.dice {
 }
 
 
+#ArticleText{
+  background-color: #070b0c;
+  width: 200%;
+  height: 250px;
+  border-radius: 1%;
+  border-style: solid;
+  color:rgb(0, 229, 69);
+}
+#ArticleText:hover{
+  /* background-color: #0d1111; */
+  width: 200%;
+  height: 250px;
+  /* border-radius: 2%; */
+ border-style: ridge ;
+}
 
+.articleForm
+{
+  position: relative;
+  display: block;
+  color:orange;
+  background-color:rgb(30, 44, 49); 
+  padding: 22px 16px;
+  width: calc(23% - 10px);
+  height: 30%;
+  margin-top: 100px;
+  margin-left: 324px;
+  border-radius: 4%;
+  border: none;
+  outline: none;
+  text-align: left;
+  cursor: pointer;
+  transition: 0.3s;
+  border: 2px solid #4CAF50;
+
+  -webkit-border-radius: 4%;
+  -moz-border-radius: 4%;
+  -ms-border-radius: 4%;
+  -o-border-radius: 4%;
+}
+.articleForm:hover{
+  display: block;
+  position: static;
+  transform: scale(1.001);
+  transform: skewX(0.1deg);
+  border-radius: 5%;
+  /*transform: skewX(.352rad);
+  *//*transform: skewX(-0.06turn);
+  transform: skewX(0);
+  */margin-top: 101px;
+  margin-left: 325px;
+  -webkit-transform: scale(1.001);
+  -moz-transform: scale(1.001);
+  -ms-transform: scale(1.001);
+  -o-transform: scale(1.001);
+  -webkit-border-radius: 5%;
+  -moz-border-radius: 5%;
+  -ms-border-radius: 5%;
+  -o-border-radius: 5%;
+}
+body {
+  background-color: grey;
+  position: relative;
+}
+.deleteFormButtons
+{
+
+  color:rgb(140, 19, 239);
+  width: calc(23% - 10px);
+  position: fixed;
+  left:40px;
+  top:80px;
+}
+
+.detailId {
+  background-color: #060101ec;
+  color:rgb(0, 139, 12);
+  width: calc(23% - 10px);
+  height: 50%;
+  position: fixed;
+  left:1240px;
+  top:80px;
+  /* overflow: visible; */
+  
+}
+/* Hide Scrollbars But Keep Functionality */
+.detailId::-webkit-scrollbar { 
+  display: none;
+}
 
 .tab {
     float: left;
@@ -169,10 +257,6 @@ section.dice {
     background-color: #ccc;
 }
 
-
-
-
-
   .tab {
     padding: 18px;
     max-height: 10;
@@ -190,7 +274,7 @@ section.dice {
 
 
 
-.tab1 button,form {
+.tab1 button {
     display: block;
     background-color: inherit;
     color: black;
@@ -300,10 +384,4 @@ border-radius: 50px;
   }
   
   /* details viewing users stuff*/
-  .detailId {
-    color:orange;
-    width: calc(23% - 10px);
-    position: absolute;
-    left:40px;
-    top:380px;
-  }
+ 
