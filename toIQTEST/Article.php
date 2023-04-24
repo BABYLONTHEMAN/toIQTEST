@@ -161,8 +161,8 @@ function bisrawa3()
   $password = "";
   $dbname = "infoyzooooornayab";
   $sql3_show = "SELECT Nawnishan, Nawarok, COUNT(*) as count FROM nwsin GROUP BY Nawnishan, Nawarok HAVING COUNT(*) > 1"; 
-  $delete_query = "DELETE FROM nwsin WHERE Nawnishan='" . $row['Nawnishan'] . "' AND Nawarok='" . $row['Nawarok'] . "' LIMIT 1";
-
+  $delete_query = "DELETE FROM nwsin WHERE Nawnishan='" . $row['Nawnishan'] . "' AND Nawarok='" . $row['Nawarok'] . "' LIMIT 2";
+  //this will delete 2 only of duplicated rows, I tried 6 and did not work!...? I dunno...
   $conn = mysqli_connect($servername, $username, $password, $dbname);
   $Anjam = mysqli_query($conn, $sql3_show);
   while ($row = mysqli_fetch_assoc($Anjam)) {
